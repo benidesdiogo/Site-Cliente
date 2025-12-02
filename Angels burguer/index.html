@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angels Burguer - Sabor de Outro Mundo</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo" id="logo-topo">
+            <img src="./img/logo.png">
+            
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#mais-pedidos">Mais pedidos</a></li>
+            <li><a href="#lanches">Lanches</a></li>
+            <li><a href="#porcoes">Porções</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+            <li><a href="#Carrinho" id="btn-abrir-carrinho-nav">Carrinho</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>✨ANGELS BURGUER✨</h1>
+            <p>Os melhores lanches da região, feitos com paixão, ingredientes frescos e aquele toque especial.</p>
+            <button onclick="location.href='#mais-pedidos'">Ver Cardápio</button>
+        </div>
+    </section>
+
+    <section id="mais-pedidos">
+        <h2>🔥 MAIS PEDIDOS</h2>
+        <div class="menu-grid">
+            
+            <div class="item">
+                <img src="./img/Hot Dog Especial.jpg" alt="Hot Dog Especial">
+                <div class="item-content">
+                    <h3>Hot Dog Especial</h3>
+                    <p>Salsicha, molho, purê, batata palha e queijo ralado.</p>
+                    <p class="price">R$ <span class="preco-item">26,90</span></p>
+                    <button class="btn-add" data-nome="Hot Dog Especial" data-preco="26.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/X-tudo.jpg" alt="X-Tudo">
+                <div class="item-content">
+                    <h3>X-Tudo</h3>
+                    <p>Alface, tomate, hambúrguer, muçarela, bacon, ovo e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">29,90</span></p>
+                    <button class="btn-add" data-nome="X-Tudo" data-preco="29.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/turbaina.jpeg" alt="Turbaina">
+                <div class="item-content">
+                    <h3>Turbaina 300ml</h3>
+                    <p>O refrigerante mais querido da região.</p>
+                    <p class="price">R$ <span class="preco-item">6,00</span></p>
+                    <button class="btn-add" data-nome="Turbaina 300ml" data-preco="6.00">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lanches">
+        <h2>🍔 ANGEL LANCHES</h2>
+        <div class="menu-grid">
+            <div class="item">
+                <img src="./img/x-bacon.jpg" alt="X-Bacon">
+                <div class="item-content">
+                    <h3>X-Bacon</h3>
+                    <p>Pão de hambúrguer, hambúrguer, muçarela, bacon e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">25,90</span></p>
+                    <button class="btn-add" data-nome="X-Bacon" data-preco="25.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/X-tudo.jpg" alt="X-Tudo">
+                <div class="item-content">
+                    <h3>X-Tudo</h3>
+                    <p>Alface, tomate, hambúrguer, muçarela, bacon, ovo e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">29,90</span></p>
+                    <button class="btn-add" data-nome="X-Tudo" data-preco="29.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/x-frango.jpg" alt="X-Frango">
+                <div class="item-content">
+                    <h3>X-Frango</h3>
+                    <p>150g de frango fatiado, tomate, alface, muçarela e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">25,90</span></p>
+                    <button class="btn-add" data-nome="X-Frango" data-preco="25.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/x-salada.jpg" alt="X-Salada">
+                <div class="item-content">
+                    <h3>X-Salada</h3>
+                    <p>Alface, tomate, hambúrguer e mussarela</p>
+                    <p class="price">R$ <span class="preco-item">23,90</span></p>
+                    <button class="btn-add" data-nome="X-Salada" data-preco="23.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/x-egg.jpg" alt="X-Egg">
+                <div class="item-content">
+                    <h3>X-Egg</h3>
+                    <p>Hambúrguer, muçarela, ovo e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">25,90</span></p>
+                    <button class="btn-add" data-nome="X-Egg" data-preco="25.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/X Contra-filé Na Baguete.jpg" alt="X Contra-filé na Baguete">
+                <div class="item-content">
+                    <h3>X Contra-filé na Baguete</h3>
+                    <p>Contra-filé fatiado, catupiry, maionese caseira e cebola roxa</p>
+                    <p class="price">R$ <span class="preco-item">36,90</span></p>
+                    <button class="btn-add" data-nome="X Contra-filé na Baguete" data-preco="36.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/Hambúrguer Artesanal.jpg" alt="Hambúrguer Artesanal">
+                <div class="item-content">
+                    <h3>Hambúrguer Artesanal</h3>
+                    <p>Alface, tomate, hambúrguer artesanal, cheddar, bacon e maionese verde</p>
+                    <p class="price">R$ <span class="preco-item">35,90</span></p>
+                    <button class="btn-add" data-nome="Hambúrguer Artesanal" data-preco="35.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/Lanche De Linguiça Na Baguete.jpg" alt="Lanche de Linguiça na Baguete">
+                <div class="item-content">
+                    <h3>Lanche de Linguiça na Baguete</h3>
+                    <p>Pão baguete, linguiça toscana, vinagrete e maionese caseira</p>
+                    <p class="price">R$ <span class="preco-item">30,90</span></p>
+                    <button class="btn-add" data-nome="Lanche de Linguiça na Baguete" data-preco="30.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/Onion ring burguers.jpg" alt="Onion Ring Burguers">
+                <div class="item-content">
+                    <h3>Onion Ring Burguers</h3>
+                    <p>Pão de hambúrguer, bacon, anéis de cebola, hambúrguer artesanal e cheddar</p>
+                    <p class="price">R$ <span class="preco-item">38,90</span></p>
+                    <button class="btn-add" data-nome="Onion Ring Burguers" data-preco="38.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/Salad bacon.jpg" alt="Salad Bacon">
+                <div class="item-content">
+                    <h3>Salad Bacon</h3>
+                    <p>Hambúrguer, alface, tomate, bacon, mussarela e maionese verde</p>
+                    <p class="price">R$ <span class="preco-item">27,90</span></p>
+                    <button class="btn-add" data-nome="Salad Bacon" data-preco="27.90">Adicionar</button>
+                </div>
+            </div>
+
+        </div> </section>
+
+    <section id="porcoes">
+        <h2>🍟 PORÇÕES</h2>
+        <div class="menu-grid">
+
+            <div class="item">
+                <img src="./img/BatataFrita.jpg" alt="Batata Frita 300g">
+                <div class="item-content">
+                    <h3>Batata Frita 300g</h3>
+                    <p>300 gramas de muita crocância. Ideal para a família.</p>
+                    <p class="price">R$ <span class="preco-item">18,90</span></p>
+                    <button class="btn-add" data-nome="Batata Frita 300g" data-preco="18.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/BatataFritasComCheddar.jpg" alt="Batata Cheddar e Bacon">
+                <div class="item-content">
+                    <h3>Batata Cheddar e Bacon</h3>
+                    <p>Batata crocante coberta com muito cheddar cremoso e cubos de bacon.</p>
+                    <p class="price">R$ <span class="preco-item">29,90</span></p>
+                    <button class="btn-add" data-nome="Batata Cheddar e Bacon" data-preco="29.90">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/FrangoApassarinho.jpg" alt="Frango a Passarinho">
+                <div class="item-content">
+                    <h3>Frango a Passarinho</h3>
+                    <p>Porção bem servida de frango a passarinho com acompanhamento de batata frita.</p>
+                    <p class="price">R$ <span class="preco-item">38,90</span></p>
+                    <button class="btn-add" data-nome="Frango a Passarinho" data-preco="38.90">Adicionar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="bebidas">
+        <h2>🥤 BEBIDAS</h2>
+        <div class="menu-grid">
+
+            <div class="item">
+                <img src="./img/cocaLata.jpg" alt="Coca-Cola Lata">
+                <div class="item-content">
+                    <h3>Coca-Cola Lata 350ml</h3>
+                    <p>Clássica, gelada e refrescante.</p>
+                    <p class="price">R$ <span class="preco-item">7,00</span></p>
+                    <button class="btn-add" data-nome="Coca-Cola Lata 350ml" data-preco="7.00">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/GuaranaLata.webp" alt="Guaraná Antarctica Lata">
+                <div class="item-content">
+                    <h3>Guaraná Antarctica Lata</h3>
+                    <p>Sabor do Brasil para acompanhar seu lanche.</p>
+                    <p class="price">R$ <span class="preco-item">7,00</span></p>
+                    <button class="btn-add" data-nome="Guaraná Antarctica Lata" data-preco="7.00">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/fantaLaranja.jpg" alt="Fanta Laranja">
+                <div class="item-content">
+                    <h3>Fanta Laranja</h3>
+                    <p>Sabor cítrico na medida certa.</p>
+                    <p class="price">R$ <span class="preco-item">7,00</span></p>
+                    <button class="btn-add" data-nome="Fanta Laranja" data-preco="7.00">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./img/turbaina.jpeg" alt="Turbaina">
+                <div class="item-content">
+                    <h3>Turbaina 300ml</h3>
+                    <p>O refrigerante regional preferido.</p>
+                    <p class="price">R$ <span class="preco-item">6,00</span></p>
+                    <button class="btn-add" data-nome="Turbaina 300ml" data-preco="6.00">Adicionar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay-add">
+        <div class="popup">
+            <h1>Adicionar ao Pedido</h1>
+            <p>Item: <strong id="popup-item-nome"></strong></p>
+            <p style="font-weight: bold; font-size: 20px;">Preço: <span id="popup-item-preco"></span></p>
+            <p>Adicione observações (Opcional):</p>
+            
+            <textarea id="obs-txt" placeholder="Ex: Sem cebola, trocar a maionese, ponto da carne mal passado, etc."></textarea>
+            
+            <button class="btn-final" id="btn-confirmar-add">
+                Confirmar e Adicionar
+            </button>
+            <button class="btn-final btn-cancelar" id="btn-cancelar-add">
+                Cancelar
+            </button>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay-carrinho">
+        <div class="popup">
+            <h1>🛒 Meu Carrinho</h1>
+            <div class="carrinho-container">
+                <div id="lista-carrinho">
+                    </div>
+                
+                <div class="carrinho-total">
+                    Total: R$ <span id="totalCarrinho">0,00</span>
+                </div>
+            </div>
+            
+            <button class="btn-final btn-finalizar-whatsapp" id="btn-finalizar">
+                Fazer Pedido por WhatsApp
+            </button>
+            <button class="btn-final btn-cancelar" id="btn-fechar-carrinho">
+                Continuar Comprando
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Variáveis Globais
+        let carrinho = []; 
+        let itemParaAdicionar = {}; 
+        
+        // Elementos do DOM (Cache)
+        const logoTopo = document.getElementById('logo-topo');
+        const overlayCarrinho = document.getElementById('overlay-carrinho');
+        const overlayAdd = document.getElementById('overlay-add');
+        const listaCarrinho = document.getElementById('lista-carrinho');
+        const totalCarrinhoSpan = document.getElementById('totalCarrinho');
+        const popupItemNome = document.getElementById('popup-item-nome');
+        const popupItemPreco = document.getElementById('popup-item-preco');
+        const obsTextarea = document.getElementById('obs-txt');
+        const btnConfirmarAdd = document.getElementById('btn-confirmar-add');
+        const btnCancelarAdd = document.getElementById('btn-cancelar-add');
+        const btnFecharCarrinho = document.getElementById('btn-fechar-carrinho');
+        const btnFinalizar = document.getElementById('btn-finalizar');
+        const btnAbrirCarrinhoNav = document.getElementById('btn-abrir-carrinho-nav');
+        const botoesAdicionar = document.querySelectorAll('.btn-add');
+
+        // Número de telefone para o WhatsApp
+        const NUMERO_WHATSAPP = "5511987654321"; // Coloque seu número aqui (Ex: 5511999999999)
+
+        // ------------------------------------------
+        // FUNÇÕES DE EXIBIÇÃO DE POPUP
+        // ------------------------------------------
+
+        function abrirPopup(id) {
+            const overlay = document.getElementById(id);
+            // Garante que está visível antes de adicionar a classe active
+            overlay.style.display = "flex"; 
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function fecharPopup(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.remove('active');
+            // Remove o display 'flex' após a transição (300ms)
+            setTimeout(() => {
+                overlay.style.display = "none";
+            }, 300);
+            document.body.style.overflow = ''; 
+        }
+        
+        // 1. Abre o popup de observação
+        function abrirPopupAdicionar(event) {
+            const botao = event.currentTarget;
+            const nome = botao.getAttribute('data-nome');
+            // Remove a vírgula (se existir) para conversão correta
+            const precoString = botao.getAttribute('data-preco').replace(',', '.');
+            const preco = parseFloat(precoString);
+
+            // Armazena temporariamente o item
+            itemParaAdicionar = { nome: nome, preco: preco };
+            
+            // Limpa o campo de observação
+            obsTextarea.value = '';
+            popupItemNome.textContent = nome;
+            // Exibe o preço formatado no popup
+            popupItemPreco.textContent = `R$ ${preco.toFixed(2).replace('.', ',')}`; 
+            
+            abrirPopup('overlay-add');
+        }
+
+        // ------------------------------------------
+        // FUNÇÕES DE CARRINHO
+        // ------------------------------------------
+
+        // Renderiza a lista de itens no popup do carrinho
+        function renderizarCarrinho() {
+            listaCarrinho.innerHTML = '';
+            let total = 0;
+
+            if (carrinho.length === 0) {
+                // Mensagem de carrinho vazio
+                listaCarrinho.innerHTML = '<p class="carrinho-msg">O seu carrinho está vazio.</p>';
+                btnFinalizar.disabled = true;
+                btnFinalizar.textContent = "Carrinho Vazio";
+            } else {
+                btnFinalizar.disabled = false;
+                btnFinalizar.textContent = "Fazer Pedido por WhatsApp";
+
+                carrinho.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('carrinho-item');
+                    
+                    // Formata o preço para R$ 0,00
+                    const precoFormatado = item.preco.toFixed(2).replace('.', ',');
+                    
+                    itemElement.innerHTML = `
+                        <div class="carrinho-info">
+                            <span class="carrinho-nome">${item.nome}</span>
+                            ${item.obs ? `<p class="carrinho-obs">Obs: ${item.obs}</p>` : ''}
+                        </div>
+                        <span class="carrinho-preco">R$ ${precoFormatado}</span>
+                        <button class="btn-remover" data-index="${index}">Remover</button>
+                    `;
+                    
+                    // Adiciona o event listener ao botão 'Remover'
+                    itemElement.querySelector('.btn-remover').addEventListener('click', removerItem);
+                    
+                    listaCarrinho.appendChild(itemElement);
+                    total += item.preco;
+                });
+            }
+            
+            // Atualiza o total
+            totalCarrinhoSpan.textContent = total.toFixed(2).replace('.', ',');
+        }
+
+        // Adiciona o item (com observação) ao array e exibe o carrinho
+        function adicionarItemAoCarrinho() {
+            if (itemParaAdicionar.nome) {
+                const obs = obsTextarea.value.trim();
+                // Cria uma cópia do objeto para evitar referências
+                const itemFinal = {
+                    nome: itemParaAdicionar.nome,
+                    preco: itemParaAdicionar.preco,
+                    obs: obs
+                };
+
+                // Adiciona o item ao carrinho
+                carrinho.push(itemFinal);
+                
+                // Limpa o item temporário
+                itemParaAdicionar = {};
+                
+                fecharPopup('overlay-add');
+                
+                // Exibe o carrinho com o novo item
+                renderizarCarrinho();
+                abrirPopup('overlay-carrinho');
+            }
+        }
+
+        // Remove item do carrinho
+        function removerItem(event) {
+            // Pega o índice através do atributo 'data-index' do botão
+            const index = event.target.getAttribute('data-index');
+            carrinho.splice(index, 1);
+            renderizarCarrinho();
+        }
+
+        // ------------------------------------------
+        // FUNÇÃO WHATSAPP
+        // ------------------------------------------
+        
+        function finalizarPedidoWhatsapp() {
+            if (carrinho.length === 0) {
+                alert("Seu carrinho está vazio. Adicione itens antes de finalizar o pedido!");
+                return;
+            }
+
+            let total = 0;
+            let itensLista = "";
+
+            carrinho.forEach((item, index) => {
+                const precoFormatado = item.preco.toFixed(2).replace('.', ',');
+                
+                // Cria a linha do item
+                let linhaItem = `*${item.nome}* (R$ ${precoFormatado})`;
+                if (item.obs) {
+                    linhaItem += ` - Obs: ${item.obs}`;
+                }
+                itensLista += linhaItem + "\n";
+                total += item.preco;
+            });
+
+            const totalFormatado = total.toFixed(2).replace('.', ',');
+            
+            let mensagem = `Olá! Gostaria de fazer o seguinte pedido:\n\n`;
+            mensagem += itensLista;
+            mensagem += `\n-------------------------\n`;
+            mensagem += `*TOTAL DO PEDIDO: R$ ${totalFormatado}*\n`;
+            mensagem += `-------------------------\n`;
+            mensagem += `\n(Por favor, me informe o endereço e a forma de pagamento.)`;
+
+            // Codifica a mensagem para URL e abre o link do WhatsApp
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            const urlWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensagemCodificada}`;
+
+            window.open(urlWhatsapp, '_blank');
+            
+            // Opcional: Limpar o carrinho e fechar o popup após o envio (melhora a experiência)
+            carrinho = [];
+            renderizarCarrinho();
+            fecharPopup('overlay-carrinho');
+        }
+
+        // ------------------------------------------
+        // EVENT LISTENERS GERAIS
+        // ------------------------------------------
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa a exibição do carrinho
+            renderizarCarrinho(); 
+            
+            // Adiciona listeners aos botões de Adicionar
+            botoesAdicionar.forEach(btn => {
+                btn.addEventListener('click', abrirPopupAdicionar);
+            });
+            
+            // Eventos do primeiro Popup (Observação)
+            btnConfirmarAdd.addEventListener('click', adicionarItemAoCarrinho);
+            btnCancelarAdd.addEventListener('click', () => fecharPopup('overlay-add'));
+            
+            // Eventos do segundo Popup (Carrinho)
+            btnFecharCarrinho.addEventListener('click', () => fecharPopup('overlay-carrinho'));
+            btnFinalizar.addEventListener('click', finalizarPedidoWhatsapp);
+            btnAbrirCarrinhoNav.addEventListener('click', (e) => {
+                e.preventDefault(); // Impede que o link de âncora tente rolar
+                renderizarCarrinho(); // Garante que o carrinho está atualizado
+                abrirPopup('overlay-carrinho');
+            });
+            
+            // Função para rolar para o topo ao clicar no logo
+            logoTopo.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

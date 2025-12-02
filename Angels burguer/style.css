@@ -1,0 +1,462 @@
+/* RESET E ESTILOS GERAIS (MANTIDOS) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: white;
+    scroll-padding-top: 80px; 
+}
+
+/* NAV (MANTIDO) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(8px); 
+    z-index: 999;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 30px;
+    color: #ffae00;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 30px;
+    object-fit: contain; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffae00; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ffc94d; 
+}
+
+/* HERO (MANTIDO) */
+.hero {
+    height: 100vh;
+    background: url('./img/background.png') center/cover no-repeat; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px; 
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+    color: #ffae00;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 24px; 
+    opacity: 0.9;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 16px 45px;
+    background: #ffae00;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    color: #0d0d0d; 
+}
+
+.hero button:hover {
+    background: #ffc94d;
+    transform: scale(1.05); 
+}
+
+/* SEÇÕES (MANTIDO) */
+section {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Bebas Neue';
+    font-size: 40px;
+    color: #ffae00;
+    margin-bottom: 50px;
+}
+
+/* ------------------ */
+/* GRID (ALTERADO AQUI) */
+/* ------------------ */
+.menu-grid {
+    display: grid;
+    /* REDUZIDO de minmax(280px, 1fr) para minmax(220px, 1fr) */
+    /* Isso permite que mais itens caibam por linha, tornando as caixas menores. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 40px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.item {
+    background: #1a1a1a;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.item:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(255,174,0,0.2); 
+}
+
+.item img {
+    width: 100%;
+    /* Reduzindo a altura da imagem para adequar ao item menor */
+    height: 180px; 
+    object-fit: cover;
+}
+
+/* Ajuste: Cria um padding interno para o texto do item */
+.item-content { 
+    padding: 10px 20px 20px;
+}
+
+.item h3 {
+    margin-top: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 26px; /* Ajuste no tamanho da fonte do título */
+    margin-bottom: 5px;
+    color: white;
+}
+
+.item p:not(.price) { 
+    font-size: 14px; /* Ajuste no tamanho da fonte da descrição */
+    color: #ccc;
+    margin-bottom: 10px; /* Espaçamento menor */
+    min-height: 35px; /* Altura mínima ajustada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.price {
+    color: #ffae00;
+    margin: 8px 0 15px;
+    font-size: 22px; /* Ajuste no tamanho da fonte do preço */
+    font-weight: bold;
+}
+
+.btn-add {
+    background: #ffae00;
+    width: 80%;
+    padding: 11px; /* Padding reduzido */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 18px; /* Margem reduzida */
+    transition: .3s;
+    color: #0d0d0d;
+    font-size: 16px; /* Fonte reduzida */
+}
+
+.btn-add:hover {
+    background: #ffc94d;
+}
+
+/* POPUP GERAL (MANTIDO) */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out; 
+    opacity: 0; 
+}
+
+.overlay.active {
+    opacity: 1;
+}
+
+.popup {
+    background: #222;
+    width: 90%;
+    max-width: 430px;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay.active .popup {
+    transform: scale(1);
+}
+
+.popup h1 {
+    color: #ffae00;
+    font-family: 'Bebas Neue';
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+
+.popup textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    resize: none;
+    border-radius: 10px;
+    background: #333;
+    padding: 15px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.popup textarea::placeholder {
+    color: #999;
+}
+
+
+.btn-final {
+    margin-top: 15px;
+    padding: 14px;
+    width: 100%;
+    background: #ffae00;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+    color: #0d0d0d;
+    font-size: 18px;
+}
+
+.btn-final:disabled {
+    background: #666;
+    cursor: not-allowed;
+    color: #ccc;
+}
+
+.btn-final:hover:not(:disabled) {
+    background: #ffc94d;
+}
+
+.btn-cancelar {
+    margin-top: 10px;
+    background: #444;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background: #555;
+}
+
+/* -------------------------------------- */
+/* ESTILOS ESPECÍFICOS DO CARRINHO (MANTIDOS) */
+/* -------------------------------------- */
+
+.carrinho-container {
+    max-height: 350px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+    margin-bottom: 20px;
+}
+
+.carrinho-container::-webkit-scrollbar {
+    width: 8px;
+}
+.carrinho-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+#lista-carrinho {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid #ffae00; 
+}
+
+.carrinho-info {
+    flex-grow: 1;
+}
+
+.carrinho-nome {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    display: block;
+}
+
+.carrinho-obs {
+    font-size: 12px;
+    color: #aaa;
+    margin: 3px 0 0;
+    font-style: italic;
+}
+
+.carrinho-preco {
+    font-weight: bold;
+    color: #ffc94d;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.btn-remover {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 15px;
+    transition: background 0.2s;
+}
+
+.btn-remover:hover {
+    background: #e74c3c;
+}
+
+.carrinho-total {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffae00;
+    border-top: 2px dashed #444;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.carrinho-msg {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    padding: 20px;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE (MANTIDO E AJUSTADO) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none; 
+    }
+    
+    .logo {
+        font-size: 36px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 50px;
+    }
+
+    .menu-grid {
+        /* O valor de minmax(220px, 1fr) aqui garante que a flexibilidade continue funcionando */
+        gap: 30px;
+    }
+    
+    /* Outros ajustes de carrinho e detalhes */
+    .carrinho-item {
+        flex-wrap: wrap; 
+    }
+    
+    .carrinho-info {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .carrinho-preco {
+        order: 3; 
+        margin-left: 0;
+    }
+    
+    .btn-remover {
+        order: 4; 
+    }
+}
